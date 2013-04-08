@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.6.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/SCS/Open Source/jsoup/jsoup-1.6.3-javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/ScenicView.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/fluent-hc-4.2.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/SCS/Open Source/httpcomponents/httpcomponents-client-4.2.1-bin/httpcomponents-client-4.2.1/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/httpclient-4.2.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/SCS/Open Source/httpcomponents/httpcomponents-client-4.2.1-bin/httpcomponents-client-4.2.1/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/httpclient-cache-4.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.2.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/SCS/Open Source/httpcomponents/httpcomponents-client-4.2.1-bin/httpcomponents-client-4.2.1/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/httpmime-4.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/kxml2-2.3.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://kxml.sourceforge.net/kxml2/javadoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/javafx-animation.jar"/>
+	<classpathentry kind="lib" path="lib/fxexperience-control.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.6.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/SCS/Open Source/lucene/lucene-core-3.6.0-javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/IKAnalyzer2012.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet style-dark.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="990.0" styleClass="bg-container" xmlns:fx="http://javafx.com/fxml" fx:controller="org.tjumyk.PlayerController">
+  <children>
+    <AnchorPane id="AnchorPane" fx:id="backgroundPane" prefHeight="720.0" prefWidth="960.0" styleClass="background" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <children>
+        <Label styleClass="bg-cover" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <HBox fx:id="navBar" minHeight="22.0" prefHeight="25.0" prefWidth="680.0" styleClass="navbar" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="60.0">
+          <children>
+            <Label fx:id="homeNav" text="home">
+              <font>
+                <Font size="24.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label fx:id="channelsNav" font="$x1" styleClass="deactivated" text="channels" />
+            <Label fx:id="artistsNav" font="$x1" styleClass="deactivated" text="artists" />
+            <Label fx:id="albumsNav" font="$x1" styleClass="deactivated" text="albums" />
+            <Label fx:id="playlistsNav" font="$x1" styleClass="deactivated" text="playlists" />
+          </children>
+        </HBox>
+        <HBox fx:id="toolBar" alignment="TOP_RIGHT" prefHeight="26.0" prefWidth="160.0" styleClass="toolbar" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="60.0">
+          <children>
+            <ImageView id="adjustToolBtn" fx:id="tuningToolBtn" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-adjust, icon">
+              <HBox.margin>
+                <Insets top="3.0" fx:id="x2" />
+              </HBox.margin>
+            </ImageView>
+            <ImageView id="configToolBtn" fx:id="settingToolBtn" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-setting, icon">
+              <HBox.margin>
+                <Insets top="3.0" fx:id="x3" />
+              </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="searchToolBtn" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-search, icon" HBox.margin="$x2" />
+          </children>
+        </HBox>
+        <AnchorPane id="AnchorPane" fx:id="metroContentsContainer" styleClass="metro-table-container" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+          <children>
+            <HBox fx:id="metroContents" layoutX="90.0" prefHeight="420.0" prefWidth="100.0" styleClass="metro-table" AnchorPane.bottomAnchor="70.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane id="AnchorPane" fx:id="toolPanelContainer" minHeight="570.0" prefHeight="570.0" visible="false" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="50.0">
+          <children>
+            <fx:include fx:id="searchPanel" source="searchPanel.fxml" prefHeight="585.0" prefWidth="780.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <fx:include fx:id="settingPanel" source="settingPanel.fxml" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <fx:include fx:id="tuningPanel" source="tuningPanel.fxml" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <fx:include fx:id="playListPanel" source="playListPanel.fxml" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+        <HBox prefHeight="50.0" prefWidth="514.0" styleClass="tracker" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="90.0">
+          <children>
+            <ImageView fx:id="miniPlayerThumb" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" styleClass="cover-image, mini-cover-image" />
+            <VBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="454.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Label fx:id="playerTitle" prefWidth="454.0" styleClass="small-song-title" text="Song Title">
+                  <VBox.margin>
+                    <Insets bottom="18.0" top="3.0" />
+                  </VBox.margin>
+                </Label>
+                <ProgressBar fx:id="trackLine" minHeight="5.0" opacity="0.0" prefHeight="5.0" prefWidth="245.0" progress="0.0" />
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" styleClass="controller" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="90.0">
+          <children>
+            <StackPane id="prevBtn" fx:id="lazyBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" styleClass="controller-button">
+              <children>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="controller-lazy-image" />
+                <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="controller-circle" />
+              </children>
+            </StackPane>
+            <StackPane fx:id="prevBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" styleClass="controller-button">
+              <children>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="controller-prev-image" />
+                <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="controller-circle" />
+              </children>
+            </StackPane>
+            <StackPane fx:id="playBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" styleClass="controller-button">
+              <children>
+                <ImageView fx:id="controllerPlayImage" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="controller-play-image" />
+                <Circle fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" styleClass="controller-circle" />
+              </children>
+            </StackPane>
+            <StackPane fx:id="nextBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" styleClass="controller-button">
+              <children>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="controller-next-image" />
+                <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="controller-circle" />
+              </children>
+            </StackPane>
+            <StackPane id="nextBtn" fx:id="downloadBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" styleClass="controller-button">
+              <children>
+                <ImageView fx:id="downloadBtnImg" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="controller-download-image" />
+                <ProgressIndicator fx:id="downloadProInd">
+                  <StackPane.margin>
+                    <Insets />
+                  </StackPane.margin>
+                </ProgressIndicator>
+                <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" styleClass="controller-circle" />
+              </children>
+            </StackPane>
+          </children>
+        </HBox>
+        <AnchorPane fx:id="titleBar" prefHeight="50.0" prefWidth="960.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <Label fx:id="titleMessage" alignment="CENTER" layoutY="16.0" prefWidth="150.0" styleClass="title-message" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

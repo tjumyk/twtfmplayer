@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet style-dark.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.tjumyk.SearchController">
+  <children>
+    <ImageView fx:id="searchBackBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-back, icon" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" styleClass="icon, icon-play" visible="false" />
+    <Label styleClass="metro-title" text="search" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+    <TextField fx:id="searchField" prefWidth="261.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="68.0" />
+    <AnchorPane id="AnchorPane" fx:id="searchResultContainer" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="116.0">
+      <children>
+        <VBox fx:id="searchResultBox" prefHeight="27.0" prefWidth="450.0" styleClass="search-result-container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
